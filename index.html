@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DM Fitness club</title>
+
+</head>
+
+<!-- STEP:-14 Total jitna bhi body ka font tha usko change kiya .. -->
+<link href="https://fonts.googleapis.com/css2?family=Balthazar&display=swap" rel="stylesheet">
+
+<!-- STEP:- 1 maine [link] tag ka use kiya -->
+<link rel="stylesheet" href="css/style.css">
+<style>
+    /* STEP:-2 [css reset] iska matlab [margin and padding] ko badlunga.. our [background] ka pic upload karunga..*/
+    body {
+        font-family: 'Balthazar', serif;
+        margin: 0px;
+        padding: 0px;
+        background: url('img/ai.jpg');
+        /*  color mai whhite karunga jisse maine [3 box liya hai left,mid,right] inka color white ho jayega..  */
+        color: white;
+ 
+    }
+
+    /*STEP:-5 Ab mai [left,right,our mid] ye 3 boc ko [style] dunga.. */
+    /* STEP:-6 [display- inline-block] kaarunga jisse mai single single element ko edit kar saku  */
+    .left {
+        /* 1]mai isme [border] dalunga */
+        /* border: 2px solid red; */
+        /*2] display inline block karunga.. */
+        display: inline-block;
+        /* 3] isk bhi mai position: absolute; dunga [left me kitna rakhna hai set karunga our top me kitna rakhna] hai vo set karunga..  */
+        position: absolute;
+        left: 10px;
+        top: 15px;
+
+    }
+
+    .mid {
+        /* 1]mai isme [border] dalunga */
+        border: 2px solid skyblue;
+        /* 2] iska bhi display: inline-block; karunga. [width] set karunga our usko centre me lane ke liye [margin:12px, auto] dalunga..;*/
+        display: block;
+        margin: 20px auto;
+        width: 33%;
+    }
+
+    .right {
+
+        /* 1]mai isme [border] dalunga */
+        /* border: 2px solid yellow; */
+        /*2] display inline block karunga.. jisse mai [right] vale ko edit kar sakta hu.. */
+        display: inline-block;
+        /* 3] mujhe right ko uper right side corner me dalna hai to mI [position: absolute;] karunga..[right] dunga our [top] me rakhunga jaisa maine neeche kiya hain*/
+        position: absolute;
+        right: 34px;
+        top: 33px;
+    }
+
+    /* STEP:-8 ab hum jo [step 7] me likha hai usko style denge.. */
+    .navbar {
+        /* 1] display ko inline block kiya taki mai sabko width heigth de saku  */
+        display: inline-block;
+    }
+
+    /* STEP:-9 mai jo navbar ke under [li] liya hai uska bhi display inline- block karenge kyuki jitn bhi humne likha hai sab [li] ke under likha hai.. */
+
+    .navbar li {
+        /* display inline block karne se sab ak line me aa jayenge[home,about,fitness centre,contact us]  */
+        display: inline-block;
+        /* 2] ab mai in chaaro ka[home,about,fitness centre,contact us] ko size dunga isse:- [font-size: ;]  */
+        font-size: 16px;
+        
+    }
+
+    /* STEP:-10 ab main [home,about,fitness centre,contact us] inko color dunga ...our maine [.navbar li a] isliye liya kyuki neeche humne jitna bhi likha hai sab iske under likha hai isliye ye lena pada,... */
+    .navbar li a {
+        color: white;
+        /* 2] ab mai jo text likha hai uske neeche ka underline hata dunga */
+        text-decoration: none;
+        padding: 34px 23px;
+        
+    }
+
+    /* STEP:-11 [ab main jo mera home option hai uske neeche underline karna chahta hu. to mai kya karunga neeche anchor tag me href ke baad ak [class] dunga.. our yaha per [.navbar li a:hover, .navbar li a.active] aisa likhunga  jisse jitna bhi option humne rakhna hai uske niche underline aa jayega our hover ho jayega,, ] */
+
+    .navbar li a:hover,
+    .navbar li a.active {
+        text-decoration: underline;
+        /* text ke color decide karenge..  */
+        color: yellow;
+    }
+
+    /* STEP:-12 ab hum left vale ko target karenge humne jo photo post kiya hai usko width height denge  */
+    .left img {
+        width: 80px;
+        height: 60px;
+
+        /* agar mujhe koi img ka color opposite karna hai samjho black hai our whiye karna hai to hum[filter: invert;] ka use karenge */
+        /* filter: invert(); */
+
+    }
+
+    /* STEP:-13 Ab hum right side vale bar ko edit karunga.. */
+    .btn {
+        /* mai margin dunga.  */
+        margin: 0px 9px;
+        color: white;
+        background-color: black;
+        padding: 4px 14px;
+        border: 2px solid blue;
+        border-radius: 10px;
+        font-size: 15px;
+        cursor: pointer;
+        font-family: 'Balthazar', serif;
+    }
+
+    /* STEP:-14 [.btn] ke under main [:hover] karunga to jisko bhi karoge vo active hoker moment karne lagenge.. */
+    .btn:hover {
+        background-color: grey;
+    }
+
+    /* STEP:-15  ab mai vo logo ko sahi position me rakhunga.. means centre me rakhunga to [text-align] ka use karunga  */
+    .left div {
+        text-align: center;
+    }
+
+    /* STEP:-16 [ab mai container ko edit karunga] */
+    .container {
+        border: 2px solid red;
+        /* isko position me karne ke liye mai [margin] dunga  */
+        margin: 106px 80px;
+        padding: 75px;
+        width: 33%;
+        border-radius: 28px;
+    }
+
+    /* STEP:-17 ab mai us [form-group] ko edit karunga.. */
+    .formgroup input {
+        text-align: center;
+        display: block;
+        width: 508px;
+        padding: 1px;
+        border: 2px solid black;
+        margin: 11px auto;
+        font-size: 25px;
+        border-radius: 8px;
+        font-family: 'Balthazar', serif;
+    }
+
+    /* STEP:-18 ab mai [h1] ko target karunga.. */
+    .container h1 {
+        color: yellow;
+        background-color: blue;
+        display: inline-block;
+    }
+
+    /* STEP:-19 ab mai jo last me[SUBMIT,QUERY] button hai usko edit karunga.. */
+    .container button {
+        display: block;
+        width: 23%;
+        margin: auto;
+    }
+
+    /* STEP:-20 maine apne [fb, insta, twitter] ke img ko set kiya uske liye ]style diya... */
+    .social-icons {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .social-icons img {
+        width: 40px;
+        /* Aap apne icons ki chhoti width set kar sakte hain */
+        height: auto;
+        /* Automatically adjust height to maintain aspect ratio */
+    }
+
+    footer {
+  background-color: black;
+  text-align: center;
+  padding: 20px 0; /* Adjust the top and bottom padding as needed */
+  position: relative; /* Add position property for precise placement */
+}
+
+.copyright {
+  position: absolute;
+  bottom: 15px; /* Adjust the distance from the bottom as needed */
+  left: 0;
+  right: 0;
+}
+
+.copyright p {
+  margin: 0;
+  font-size: 14px;
+}
+
+
+</style>
+
+<body>
+    <!-- STEP:-3 mai sabse pehle [header] lunga usko aise likhunga:-[header.header]  -->
+    <!-- step:-4 us [header] ke under mai 3 [div] banaunga our aisa likhunga:-[div.left,div.right,div.mid]  -->
+
+    <header class="header">
+        <!-- Left box for logo -->
+        <div class="left">
+            <img src="img/builder.jpg" alt="">
+            <div>DM Fitness.</div>
+        </div>
+
+        <!-- Mid box for navbar -->
+        <div class="mid">
+            <!-- STEP:-7 ab mai [ul] lunga ..usko mai aise likhunga:-[ul.navbar].. uske baad uske under usme ak [li] lunga uske under mai anchor tag ka use karunga -->
+            <ul class="navbar">
+                <li><a href="" class="active">Home</a></li>
+                <li><a href="">About us</a></li>
+                <li><a href="">Fitness centre</a></li>
+                <li><a href="">Contact us</a></li>
+            </ul>
+
+        </div>
+
+        <!-- Right box for buttons -->
+        <div class="right">
+            <!-- STEP:-13 Ab mai right side me kuch edit karunga..  -->
+            <button class="btn">Call Us Now</button>
+            <button class="btn">Email Us</button>
+        </div>
+    </header>
+
+    <!-- STEP:-16 ab main aisa box banaunga apne website me jisse logo ko lage mere gym me offer chalu hai means ak [form] type.. to uske liye main use karunga [.container]  fir uske under mai use karunga ak [heading] fir uske baad use karunga ak [form] our usko mai backend me kuch nahi hai aisa bataunga to usme mai likhunga [no action.php] uske under main likhunga [div.formgroup] uske under mai ak [input] tag lunga usme [placeholder] dalunga..-->
+
+    <div class="container">
+        <h1>Enquiry form:-</h1>
+        <form action="noaction.php">
+            <div class="formgroup">
+                <input type="text" name="" placeholder="Enter your Name">
+            </div>
+
+            <div class="formgroup">
+                <input type="text" name="" placeholder="Enter your Age">
+            </div>
+
+            <div class="formgroup">
+                <input type="text" name="" placeholder="Enter your Gender">
+            </div>
+
+            <div class="formgroup">
+                <input type="text" name="" placeholder="Enter your Locality">
+            </div>
+
+            <div class="formgroup">
+                <input type="text" name="" placeholder="Enter your Ph.Number">
+            </div>
+
+            <button class="btn">Submit Now</button>
+
+    </div>
+    <div class="social-icons">
+        <a href="https://www.facebook.com"><img src="img/fb.jpeg" alt="Facebook"></a>
+        <a href="https://www.instagram.com"><img src="img/insta.jpg" alt="Instagram"></a>
+        <a href="https://www.twitter.com"><img src="img/twit.jpg" alt="Twitter"></a>
+    </div>
+    <footer>
+        <div class="copyright">
+          <p>[copyright:-2023 DM Fitness reserved]</p>
+        </div>
+      </footer>
+      
+    </form>
+
+</body>
+
+</html>
